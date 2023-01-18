@@ -34,7 +34,7 @@ const team = [
 function generaCard(mioArray){
     let nuovaCard = "";
     for (i=0; i<mioArray.length;i++){
-      if ( i < 6 ){
+    
         nuovaCard += `
         <div class="team-card">
     
@@ -51,24 +51,7 @@ function generaCard(mioArray){
     
         </div>
         `;
-      }else{
-        nuovaCard += `
-        <div class="team-card">
-  
-          <div class="card-image">
-            <img
-              src="${mioArray[i].image}"
-              alt="${mioArray[i].name}"
-            />
-          </div>
-          <div class="card-text">
-            <h3>${mioArray[i].name}</h3>
-            <p>${mioArray[i].role}</p>
-          </div>
-  
-        </div>
-        `;
-      }
+      
     }
 return nuovaCard;
 }
