@@ -35,14 +35,7 @@
     line-height: 1.6;
   }
   
-  .section-description {
-    max-width: 600px;
-    margin: 0 auto;
   
-    text-align: center;
-  
-    line-height: 1.8;
-  }
   
   .team-container {
     display: flex;
