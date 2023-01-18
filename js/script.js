@@ -29,4 +29,50 @@ const team = [
       role: 'Graphic Designer',
       image: 'barbara-ramos-graphic-designer.jpg',
     },
-  ];
+];
+//funzione che uso per generare una card e relative info dato un array
+function generaCard(mioArray){
+    let nuovaCard = "";
+    for (i=0; i<mioArray.length;i++){
+      if ( i < 6 ){
+        nuovaCard += `
+        <div class="team-card">
+    
+          <div class="card-image">
+            <img
+              src="img/${mioArray[i].image}"
+              alt="${mioArray[i].name}"
+            />
+          </div>
+          <div class="card-text">
+            <h3>${mioArray[i].name}</h3>
+            <p>${mioArray[i].role}</p>
+          </div>
+    
+        </div>
+        `;
+      }else{
+        nuovaCard += `
+        <div class="team-card">
+  
+          <div class="card-image">
+            <img
+              src="${mioArray[i].image}"
+              alt="${mioArray[i].name}"
+            />
+          </div>
+          <div class="card-text">
+            <h3>${mioArray[i].name}</h3>
+            <p>${mioArray[i].role}</p>
+          </div>
+  
+        </div>
+        `;
+      }
+    }
+return nuovaCard;
+}
+
+//dichiaro dove voglio che vengano stampate queste card nel DOM
+const stampaTeam = document.querySelector(".team-container");
+stampaTeam.innerHTML = generaCard(team);
